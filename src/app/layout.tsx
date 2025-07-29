@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 
 function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center basis-full">
+    <footer className="flex flex-col justify-center items-center basis-full clear-both">
       <hr className="w-4/5 h-px my-4 bg-primary border-0" />
       <ul className="flex flex-col sm:flex-row">
         <li className="p-0 sm:p-4"><b className="font-bold">Téléphone:</b> 032 497 98 04</li>
         <li className="p-0 sm:p-4"><b className="font-bold">Natel:</b> 078 659 66 85</li>
-        <li className="p-0 sm:p-4"><b className="font-bold">Adresse mail:</b> <a href="mailto:info@nomd1chien.ch">info@nomd1chien.ch</a></li>
+        <li className="p-0 sm:p-4"><b className="font-bold">Adresse mail:</b> <a href="mailto:info@nomd1chien.ch" className="text-blue-500">info@nomd1chien.ch</a></li>
       </ul>
     </footer>
   );
