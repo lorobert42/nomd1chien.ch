@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: "/nomd1chien.ch",
+  output: "export",
 };
 
 export default nextConfig;
