@@ -39,7 +39,7 @@ export default function Home() {
 
 function InfoCard() {
   return (
-    <aside className="mr-8 shadow-lg">
+    <aside className="sm:mr-8 shadow-lg">
       <div className="bg-primary p-2 text-center text-xl rounded-t-md">Informations</div>
       <div className="bg-white p-2 rounded-b-md">
         <p className="my-4">
