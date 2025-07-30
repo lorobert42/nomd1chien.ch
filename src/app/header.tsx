@@ -15,13 +15,13 @@ export default function Header() {
     }
 
     const NAV_ITEMS = [
-        { href: "/", label: "Home" },
-        { href: "/presentation", label: "Présentation" },
-        { href: "/cours", label: "Cours" },
-        { href: "/ballade", label: "Ballade active" },
-        { href: "/ressources", label: "Ressources" },
-        { href: "/trouver", label: "Nous trouver" },
-        { href: "/contact", label: "Contact" },
+        { id: 1, href: "/", label: "Home" },
+        { id: 2, href: "/presentation", label: "Présentation" },
+        { id: 3, href: "/cours", label: "Cours" },
+        { id: 4, href: "/ballade", label: "Ballade active" },
+        { id: 5, href: "/ressources", label: "Ressources" },
+        { id: 6, href: "/trouver", label: "Nous trouver" },
+        { id: 7, href: "/contact", label: "Contact" },
     ];
     const pathname = usePathname();
 
@@ -34,11 +34,11 @@ export default function Header() {
                     <X size={42} className={`${hamburgerOpen ? '' : 'hidden'}`} />
                 </button>
                 <ul className={`${hamburgerOpen ? 'flex w-9/10' : 'hidden sm:flex'} flex-col sm:flex-row rounded-md bg-white sm:bg-inherit`}>
-                    {NAV_ITEMS.map(({ href, label }) => {
+                    {NAV_ITEMS.map(({ id, href, label }) => {
                         return (
                             <Link
                                 key={href}
-                                className={`${pathname === href ? 'active bg-primary' : ''} text-2xl px-4 sm:py-4 mx-0 rounded-md hover:bg-white`}
+                                className={`${pathname === href ? 'active bg-primary' : ''} ${id === 1 ? 'rounded-t-md' : ''} ${id === 7 ? 'rounded-b-md' : ''} text-2xl px-4 sm:py-4 mx-0 sm:rounded-md hover:bg-white`}
                                 href={href}
                             >{label}</Link>
                         );
